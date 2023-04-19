@@ -32,6 +32,7 @@ type Executor struct {
 	stdo io.ReadCloser
 	stde io.ReadCloser
 	sync.Mutex
+	wg sync.WaitGroup
 }
 
 type ExecState struct {
@@ -133,6 +134,9 @@ func (e *Executor) Run(log termlog.Stream, bufferr bool) (error, *ExecState) {
 		return err, nil
 	}
 
+	e.wg.Add(1)
+	defer e.wg.Done()
+
 	// Order is important here. We MUST wait for the readers to exit before we wait
 	// on the command itself.
 	wg.Wait()
@@ -156,8 +160,13 @@ func (e *Executor) Signal(sig os.Signal) error {
 	return e.sendSignal(sig)
 }
 
-func (e *Executor) Stop() error {
-	return e.Signal(os.Kill)
+func (e *Executor) Stop(sig os.Signal) error {
+	err := e.Signal(sig)
+	if err != nil {
+		return err
+	}
+	e.wg.Wait()
+	return nil
 }
 
 func logOutput(wg *sync.WaitGroup, fp io.ReadCloser, out func(string, ...interface{})) {

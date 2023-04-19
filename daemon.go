@@ -98,7 +98,7 @@ func (d *daemon) Shutdown(sig os.Signal) error {
 	d.log.Notice(">> stopping")
 	d.stop = true
 	if d.ex != nil {
-		return d.ex.Stop()
+		return d.ex.Stop(sig)
 	}
 	return nil
 }
