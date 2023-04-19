@@ -6,7 +6,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/cortesi/modd/conf"
+	"github.com/caeret/modd/conf"
 	"github.com/cortesi/moddwatch"
 )
 

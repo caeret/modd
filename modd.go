@@ -8,9 +8,9 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/cortesi/modd/conf"
-	"github.com/cortesi/modd/notify"
-	"github.com/cortesi/modd/shell"
+	"github.com/caeret/modd/conf"
+	"github.com/caeret/modd/notify"
+	"github.com/caeret/modd/shell"
 	"github.com/cortesi/moddwatch"
 	"github.com/cortesi/termlog"
 )

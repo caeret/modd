@@ -6,8 +6,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/cortesi/modd"
-	"github.com/cortesi/modd/notify"
+	"github.com/caeret/modd"
+	"github.com/caeret/modd/notify"
 	"github.com/cortesi/termlog"
 	"gopkg.in/alecthomas/kingpin.v2"
 	"mvdan.cc/sh/v3/interp"

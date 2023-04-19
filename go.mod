@@ -1,4 +1,4 @@
-module github.com/cortesi/modd
+module github.com/caeret/modd
 
 go 1.14
 

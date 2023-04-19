@@ -3,10 +3,10 @@ package modd
 import (
 	"time"
 
-	"github.com/cortesi/modd/conf"
-	"github.com/cortesi/modd/notify"
-	"github.com/cortesi/modd/shell"
-	"github.com/cortesi/modd/varcmd"
+	"github.com/caeret/modd/conf"
+	"github.com/caeret/modd/notify"
+	"github.com/caeret/modd/shell"
+	"github.com/caeret/modd/varcmd"
 	"github.com/cortesi/moddwatch"
 	"github.com/cortesi/termlog"
 )

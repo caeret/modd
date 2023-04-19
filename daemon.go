@@ -6,9 +6,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cortesi/modd/conf"
-	"github.com/cortesi/modd/shell"
-	"github.com/cortesi/modd/varcmd"
+	"github.com/caeret/modd/conf"
+	"github.com/caeret/modd/shell"
+	"github.com/caeret/modd/varcmd"
 	"github.com/cortesi/termlog"
 )
 

@@ -6,8 +6,8 @@ import (
 	"path"
 	"testing"
 
-	"github.com/cortesi/modd/conf"
-	"github.com/cortesi/modd/utils"
+	"github.com/caeret/modd/conf"
+	"github.com/caeret/modd/utils"
 )
 
 var quotePathTests = []struct {
